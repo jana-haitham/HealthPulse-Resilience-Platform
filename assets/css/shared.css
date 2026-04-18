@@ -1,22 +1,25 @@
 :root {
-  --primary-color: #0c66e4; /* Medical Blue */
+  --primary-color: #0c66e4;
+  /* Medical Blue */
   --primary-light: #e9f2ff;
   --primary-dark: #0747a1;
-  --secondary-color: #00b8d9; /* Health Tech Cyan */
+  --secondary-color: #00b8d9;
+  /* Health Tech Cyan */
   --secondary-light: #e6fcff;
   --bg-color: #f4f5f7;
   --text-main: #172b4d;
   --text-muted: #6b778c;
   --white: #ffffff;
-  --success: #36b37e; /* Positive medical green */
+  --success: #36b37e;
+  /* Positive medical green */
   --danger: #cf222e;
   --warning: #ffab00;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
   --radius-pro: 12px;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --glow-color: rgba(12, 102, 228, 0.15);
 }
 
@@ -46,9 +49,9 @@ body::before {
   width: 100%;
   height: 100%;
   /* Mesh Gradient */
-  background: 
-    radial-gradient(at 0% 0%, rgba(12, 102, 228, 0.08) 0, transparent 50%), 
-    radial-gradient(at 100% 0%, rgba(0, 184, 217, 0.08) 0, transparent 50%), 
+  background:
+    radial-gradient(at 0% 0%, rgba(12, 102, 228, 0.08) 0, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(0, 184, 217, 0.08) 0, transparent 50%),
     radial-gradient(at 50% 100%, rgba(54, 179, 126, 0.08) 0, transparent 50%),
     var(--white);
   z-index: -2;
@@ -56,8 +59,13 @@ body::before {
 }
 
 @keyframes meshAnim {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.1); }
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 /* Floating Health Elements */
@@ -75,13 +83,19 @@ body::before {
 .bg-icon {
   position: absolute;
   font-size: 2.5rem;
-  filter: blur(1px);
   animation: float 15s infinite ease-in-out;
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-30px) rotate(15deg); }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-30px) rotate(15deg);
+  }
 }
 
 /* Cursor Glow Effect */
@@ -106,7 +120,7 @@ body::before {
   box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 2500;
   border-bottom: 1px solid #dfe1e6;
 }
 
@@ -115,14 +129,21 @@ body::before {
   font-weight: 700;
   color: var(--primary-color);
   text-decoration: none;
+  letter-spacing: -0.2px;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  letter-spacing: -0.2px;
+  gap: 12px;
 }
 
-.navbar .logo::before {
-  display: none;
+.nav-brand-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .nav-brand-img {
+  transform: scale(1.05);
 }
 
 .nav-links {
@@ -142,10 +163,11 @@ body::before {
 }
 
 .nav-links li a span {
-    display: inline;
+  display: inline;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--primary-color);
   background-color: var(--primary-light);
 }
@@ -171,7 +193,7 @@ body::before {
 }
 
 .card:hover {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .btn-primary {
@@ -223,20 +245,34 @@ body::before {
 
 /* Status Badges */
 .status-badge {
-    padding: 0.25rem 0.75rem;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-.status-positive { background-color: #e3fcef; color: #006644; }
-.status-neutral { background-color: #f4f5f7; color: #42526e; }
+.status-positive {
+  background-color: #e3fcef;
+  color: #006644;
+}
+
+.status-neutral {
+  background-color: #f4f5f7;
+  color: #42526e;
+}
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fade-in {
@@ -274,7 +310,7 @@ body::before {
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
     transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2000;
     gap: 2rem;
@@ -284,7 +320,7 @@ body::before {
   .nav-links.active {
     right: 0;
   }
-  
+
   .nav-links a {
     padding: 0.8rem 2rem;
     font-size: 1.1rem;
@@ -293,17 +329,38 @@ body::before {
     display: block;
   }
 
-  .nav-links a span { display: inline; }
-  
-  .nav-links li:nth-child(n) a::before { display: none; }
+  .nav-links a span {
+    display: inline;
+  }
+
+  /* Backdrop Style */
+  #nav-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1500;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  #nav-backdrop.active {
+    visibility: visible;
+    opacity: 1;
+  }
 
   /* Hamburger Animation */
   .menu-toggle.active span:nth-child(1) {
     transform: translateY(7.5px) rotate(45deg);
   }
+
   .menu-toggle.active span:nth-child(2) {
     opacity: 0;
   }
+
   .menu-toggle.active span:nth-child(3) {
     transform: translateY(-7.5px) rotate(-45deg);
   }
@@ -314,16 +371,18 @@ body::before {
   }
 }
 
+
 @media (max-width: 480px) {
   :root {
     --spacing-lg: 1.5rem;
   }
-  
+
   .container {
     padding: 1.5rem 4%;
   }
-  
-  h1, h2 {
+
+  h1,
+  h2 {
     letter-spacing: -0.5px;
   }
 
@@ -335,55 +394,75 @@ body::before {
 
 /* Toast System */
 #toast-container {
-    position: fixed;
-    bottom: 24px;
-    left: 24px;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    pointer-events: none;
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
 }
 
 .toast {
-    background: var(--white);
-    color: var(--text-main);
-    padding: 1rem 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid var(--primary-color);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    min-width: 280px;
-    max-width: 400px;
-    animation: toastSlideIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-    pointer-events: auto;
+  background: var(--white);
+  color: var(--text-main);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  min-width: 280px;
+  max-width: 400px;
+  animation: toastSlideIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  pointer-events: auto;
 }
 
-.toast-icon { font-size: 1.2rem; }
-.toast.fade-out { animation: toastFadeOut 0.5s ease forwards; }
+.toast-icon {
+  font-size: 1.2rem;
+}
+
+.toast.fade-out {
+  animation: toastFadeOut 0.5s ease forwards;
+}
 
 @keyframes toastSlideIn {
-     from { opacity: 0; transform: translateX(-50px); }
-     to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes toastFadeOut {
-     from { opacity: 1; transform: translateY(0); }
-     to { opacity: 0; transform: translateY(20px); }
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 }
 
 @media (max-width: 768px) {
-    #toast-container {
-        bottom: 80px;
-        left: 5%;
-        width: 90%;
-    }
-    .toast {
-        min-width: auto;
-        width: 100%;
-    }
+  #toast-container {
+    bottom: 80px;
+    left: 5%;
+    width: 90%;
+  }
+
+  .toast {
+    min-width: auto;
+    width: 100%;
+  }
 }

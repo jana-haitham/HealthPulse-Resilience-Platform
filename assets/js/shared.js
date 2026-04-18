@@ -132,6 +132,39 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- Mobile Side Nav System ---
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    let backdrop = document.getElementById('nav-backdrop');
+
+    // Create backdrop if it doesn't exist
+    if (!backdrop) {
+        backdrop = document.createElement('div');
+        backdrop.id = 'nav-backdrop';
+        document.body.appendChild(backdrop);
+    }
+
+    function toggleMenu() {
+        const isActive = navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        backdrop.classList.toggle('active');
+        document.body.style.overflow = isActive ? 'hidden' : '';
+    }
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', toggleMenu);
+        backdrop.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+        });
+    }
+
     // --- Motivational Toast System ---
     const motivationMessages = [
         { text: "Your health is your real wealth ❤️", icon: "🏥" },
