@@ -34,4 +34,4 @@ HealthPulse is a professional health-tech analytics platform dedicated to **SDG 
 - `/assets/imges/`: Corporate brand assets and media.
 
 ## ⚖️ License
-Personal use / Educational project.
+Educational project.
