@@ -29,8 +29,9 @@ HealthPulse is a professional health-tech analytics platform dedicated to **SDG 
 - `/challenges.html`: Resilience challenge execution.
 - `/mood.html`: Mental health monitoring.
 - `/profile.html`: Identity and goal management.
-- `/js/`: System logic and shared protocols.
-- `/css/`: Design system and component styling.
+- `/assets/js/`: System logic and shared protocols.
+- `/assets/css/`: Design system and component styling.
+- `/assets/imges/`: Corporate brand assets and media.
 
 ## ⚖️ License
 Personal use / Educational project.
