@@ -1,5 +1,7 @@
 # HealthPulse - Wellness Optimization Platform
 
+[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://jana-haitham.github.io/HealthPulse-Resilience-Platform/)
+
 HealthPulse is a professional health-tech analytics platform dedicated to **SDG 3: Good Health and Well-being**. It empowers users to track their physical and mental health markers through structured routines, personalized challenges, and real-time resilience coaching.
 
 ## 🚀 Key Features
