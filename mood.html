@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthPulse - Cognitive Health Monitor</title>
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/mood.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html" class="logo">HealthPulse</a>
+        <ul class="nav-links">
+            <li><a href="home.html"><span>Home</span></a></li>
+            <li><a href="dashboard.html"><span>Analytics</span></a></li>
+            <li><a href="habits.html"><span>Habits</span></a></li>
+            <li><a href="mood.html"><span>Mental Health</span></a></li>
+            <li><a href="challenges.html"><span>Challenges</span></a></li>
+            <li><a href="profile.html"><span>Profile</span></a></li>
+            <li><a href="#" onclick="logout(); return false;" class="logout-link"><span>Logout</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="container fade-in">
+        <div class="card mood-tracker">
+            <header class="page-header">
+                <h2>Psychometric State Assessment 🧠</h2>
+                <p class="subtitle">Monitor cognitive patterns and maintain optimal emotional equilibrium.</p>
+            </header>
+            
+            <div class="mood-options">
+                <button class="mood-btn" data-mood="happy">
+                    <span class="emoji">😄</span>
+                    <span>Stable / High</span>
+                </button>
+                <button class="mood-btn" data-mood="neutral">
+                    <span class="emoji">😐</span>
+                    <span>Standard / Balanced</span>
+                </button>
+                <button class="mood-btn" data-mood="sad">
+                    <span class="emoji">😔</span>
+                    <span>Low / Recovery</span>
+                </button>
+            </div>
+
+            <div id="moodFeedback" class="feedback-box hidden">
+                <!-- Data-driven feedback populated by JS -->
+            </div>
+            
+            <div class="current-status card">
+                <h3>Latest Psychometric Log</h3>
+                <div id="currentMoodStatus">No data recorded for current session.</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/shared.js"></script>
+    <script src="js/mood.js"></script>
+</body>
+</html>

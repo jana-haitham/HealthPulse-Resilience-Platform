@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to HealthPulse - Initialize Your Journey</title>
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container onboarding-wrapper">
+        <div class="onboarding-card card fade-in">
+            <div class="onboarding-logo">❤️</div>
+            
+            <!-- Step 1: Identity Selection -->
+            <div id="step1">
+                <h1 class="step-title">Welcome to HealthPulse</h1>
+                <p class="step-subtitle">Select your clinical access method to begin.</p>
+                
+                <div class="options-grid">
+                    <button id="guestBtn" class="option-btn">
+                        <span class="option-icon">👤</span>
+                        <span class="option-label">Join as Guest</span>
+                    </button>
+                    <button id="signInBtn" class="option-btn">
+                        <span class="option-icon">🔐</span>
+                        <span class="option-label">Sign In</span>
+                    </button>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1.5rem;">
+                    Sign in allows syncing across multiple medical devices.
+                </p>
+            </div>
+
+            <!-- Step 1.5: Sign In Form -->
+            <div id="signInForm" class="hidden">
+                <h1 class="step-title">Create Your Identity</h1>
+                <p class="step-subtitle">Enter your credentials to secure your health data.</p>
+                
+                <div class="form-group" style="text-align: left; margin-bottom: 1rem;">
+                    <label>Registry Name</label>
+                    <input type="text" id="regName" placeholder="Full Name" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 2px solid #ebecf0;">
+                </div>
+                <div class="form-group" style="text-align: left; margin-bottom: 1rem;">
+                    <label>Medical Email</label>
+                    <input type="email" id="regEmail" placeholder="email@example.com" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 2px solid #ebecf0;">
+                </div>
+                <div class="form-group" style="text-align: left; margin-bottom: 1.5rem;">
+                    <label>Access Password</label>
+                    <input type="password" id="regPass" placeholder="••••••••" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 2px solid #ebecf0;">
+                </div>
+
+                <button id="authContinueBtn" class="btn-primary" style="width: 100%;">Continue to Protocol Selection</button>
+                <button id="backToIdentity" class="btn-link" style="margin-top: 1rem; color: var(--text-muted); background: none; border: none; cursor: pointer;">← Change Identity Method</button>
+            </div>
+
+            <!-- Step 2: Goal Selection -->
+            <div id="step2" class="hidden">
+                <h1 class="step-title">Optimize Your Focus</h1>
+                <p class="step-subtitle">What is your primary systemic health goal?</p>
+                
+                <div class="form-group">
+                    <select id="goalSelect">
+                        <option value="Stay Fit">Peak Conditioning (Stay Fit)</option>
+                        <option value="Lose Weight">Metabolic Balance (Lose Weight)</option>
+                        <option value="Mental Health">Cognitive Fortitude (Mental Health)</option>
+                        <option value="Build Muscle">Physical Hypertrophy (Build Muscle)</option>
+                    </select>
+                </div>
+
+                <div class="finish-area">
+                    <button id="finishBtn" class="btn-primary" style="width: 100%;">Initialize Protocol</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Elements and Scripts -->
+    <script src="js/shared.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</body>
+</html>

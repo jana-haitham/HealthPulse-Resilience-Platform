@@ -1,0 +1,15 @@
+# Media and large files
+*.zip
+*.mp4
+*.pdf
+
+# Documentation folder
+24030195/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/

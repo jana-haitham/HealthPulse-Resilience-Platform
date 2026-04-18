@@ -1,0 +1,130 @@
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.avatar {
+    font-size: 4rem;
+    background: var(--primary-light);
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: inline-block;
+    box-shadow: var(--shadow-sm);
+    border: 3px solid var(--white);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: 0.9rem;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #dfe1e6;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: var(--white);
+    transition: all 0.2s;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.save-msg {
+    margin-top: 1rem;
+    color: var(--success);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.stats-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #dfe1e6;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.stat-card {
+    background: #f4f5f7;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #dfe1e6;
+}
+
+.stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.mgmt-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #dfe1e6;
+}
+
+.mgmt-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: #f4f5f7;
+    color: var(--text-main);
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 1px solid #dfe1e6;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-secondary:hover {
+    background-color: #ebecf0;
+    border-color: #c1c7d0;
+}
+
+.hidden {
+    display: none;
+}

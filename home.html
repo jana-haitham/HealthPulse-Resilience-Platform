@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthPulse - SDG 3 Wellness Companion</title>
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html" class="logo">HealthPulse</a>
+        <ul class="nav-links">
+            <li><a href="home.html"><span>Home</span></a></li>
+            <li><a href="dashboard.html"><span>Analytics</span></a></li>
+            <li><a href="habits.html"><span>Habits</span></a></li>
+            <li><a href="mood.html"><span>Mental Health</span></a></li>
+            <li><a href="challenges.html"><span>Challenges</span></a></li>
+            <li><a href="profile.html"><span>Profile</span></a></li>
+            <li><a href="#" onclick="logout(); return false;" class="logout-link"><span>Logout</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="hero fade-in">
+            <h1 class="hero-title">Optimize Your Health & Well-being, <span id="welcomeName">User</span> ❤️</h1>
+            <p class="hero-subtitle">A professional analytics platform dedicated to SDG 3: Ensuring healthy lives and promoting well-being for all ages.</p>
+            <div id="statusOverlay" class="status-overlay hidden">
+                <div class="mini-score">
+                    Current Resilience Index: <span id="miniScoreVal">0</span>%
+                </div>
+            </div>
+            <a href="dashboard.html" class="btn-primary">Go to Dashboard</a>
+        </section>
+
+        <section class="tip-section fade-in" style="animation-delay: 0.1s;">
+            <div class="tip-card card">
+                <h3>📊 Medical Insight</h3>
+                <p id="dailyTip">Analyzing health trends...</p>
+            </div>
+        </section>
+
+        <section class="features fade-in" style="animation-delay: 0.2s;">
+            <div class="card feature-card" onclick="window.location.href='habits.html'">
+                <div class="feature-icon">🏃‍♀️</div>
+                <h3>Physical Wellness</h3>
+                <p>Track vital habits and maintain an active lifestyle for long-term health resilience.</p>
+            </div>
+            <div class="card feature-card" onclick="window.location.href='mood.html'">
+                <div class="feature-icon">🧠</div>
+                <h3>Cognitive Health</h3>
+                <p>Monitor your mental state and build emotional strength with data-driven mood tracking.</p>
+            </div>
+            <div class="card feature-card" onclick="window.location.href='challenges.html'">
+                <div class="feature-icon">📊</div>
+                <h3>Health Goals</h3>
+                <p>Compete in structured health challenges designed to improve your physical and mental markers.</p>
+            </div>
+        </section>
+
+        <section class="facts-slider-section fade-in" style="animation-delay: 0.3s;">
+            <div class="card slider-card">
+                <h3>🌍 Global Health Statistics</h3>
+                <div class="slider-container">
+                    <div id="fact-content" class="fact-fade">
+                        <span class="fact-icon" id="fact-icon">🏥</span>
+                        <p id="fact-text">Fetching latest global health data...</p>
+                    </div>
+                </div>
+                <div class="slider-dots" id="slider-dots"></div>
+            </div>
+        </section>
+
+        <section class="quiz-section fade-in" style="animation-delay: 0.4s;">
+            <div class="card quiz-card">
+                <h3>📋 Health Assessment Quiz</h3>
+                <div id="quiz-container">
+                    <div class="quiz-progress">
+                        <div class="progress-fill" id="quiz-progress-fill" style="width: 0%;"></div>
+                    </div>
+                    <p class="quiz-step" id="quiz-step">Assessment Stage 1/3</p>
+                    <div id="question-area">
+                        <p class="question-text" id="question-text">How many hours do you sleep per day?</p>
+                        <div class="quiz-options" id="quiz-options"></div>
+                    </div>
+                </div>
+                <div id="quiz-result" class="hidden result-box">
+                    <h4 id="result-title">Assessment Summary</h4>
+                    <p id="result-text"></p>
+                    <p id="result-motivational" class="motivational-msg"></p>
+                    <button class="btn-primary" onclick="resetQuiz()">Retake Assessment</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="sdg-section fade-in" style="animation-delay: 0.5s;">
+            <div class="sdg-card card">
+                <div class="sdg-header">
+                    <span class="sdg-icon">🏥</span>
+                    <h2>SDG 3: Good Health and Well-being</h2>
+                </div>
+                <p class="sdg-intro">
+                    Sustainable Development Goal 3 aims to ensure healthy lives and promote well-being for all at all ages. This professional utility is designed to help individuals track their progress toward these vital targets.
+                </p>
+                <div class="sdg-facts">
+                    <div class="sdg-fact-box">
+                        <span class="fact-icon">⚕️</span>
+                        <p><strong>Universal Healthcare:</strong> HealthPulse supports the mission of universal healthcare access by empowering users to manage their own metrics.</p>
+                    </div>
+                    <div class="sdg-fact-box">
+                        <span class="fact-icon">🧠</span>
+                        <p><strong>Mental Resilience:</strong> Mental well-being is a core pillar of SDG 3, requiring consistent monitoring and support.</p>
+                    </div>
+                    <div class="sdg-fact-box">
+                        <span class="fact-icon">🏃‍♀️</span>
+                        <p><strong>Preventive Action:</strong> Small daily habits are the first line of defense in global disease prevention.</p>
+                    </div>
+                </div>
+                <div class="sdg-motivation">
+                    ❤️ <em>Every data point recorded is a step toward a healthier global community.</em>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/shared.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
+
+    <script src="js/shared.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

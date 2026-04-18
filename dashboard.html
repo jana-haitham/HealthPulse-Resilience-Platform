@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthPulse - Integrated Analytics Dashboard</title>
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html" class="logo">HealthPulse</a>
+        <ul class="nav-links">
+            <li><a href="home.html"><span>Home</span></a></li>
+            <li><a href="dashboard.html"><span>Analytics</span></a></li>
+            <li><a href="habits.html"><span>Habits</span></a></li>
+            <li><a href="mood.html"><span>Mental Health</span></a></li>
+            <li><a href="challenges.html"><span>Challenges</span></a></li>
+            <li><a href="profile.html"><span>Profile</span></a></li>
+            <li><a href="#" onclick="logout(); return false;" class="logout-link"><span>Logout</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="container fade-in">
+        <header class="dashboard-header">
+            <h2>Welcome back, <span id="userName">User</span>! ❤️</h2>
+            <div class="stats-badges">
+                <div class="badge status-badge status-positive">
+                    <span class="badge-icon">📊</span>
+                    <span id="userPoints">0</span> Points
+                </div>
+                <div class="badge status-badge status-neutral">
+                    <span class="badge-icon">🔥</span>
+                    <span id="userStreak">0</span> Day Streak
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard-grid">
+            <section class="card progress-card">
+                <div class="growth-header">
+                    <h3>Overall Compliance</h3>
+                    <div id="healthStatusBadge" class="status-badge status-positive">Optimal</div>
+                </div>
+                <div class="growth-bar-container">
+                    <div class="growth-bar" id="habitProgress"></div>
+                </div>
+                <p class="progress-text"><span id="habitsCompleted">0</span> / <span id="habitsTotal">0</span> tasks verified today</p>
+            </section>
+
+            <section class="card mood-card">
+                <h3>Current Psychometric State</h3>
+                <div class="mood-display">
+                    <span id="currentMoodEmoji" class="mood-emoji">😶</span>
+                    <p id="moodFeedback">Analyzing mood patterns...</p>
+                </div>
+                <a href="mood.html" class="btn-link">Update State →</a>
+            </section>
+
+            <section class="card index-card">
+                <h3>Health Resilience Index</h3>
+                <div class="index-display">
+                    <div class="circular-progress">
+                        <span id="healthScoreValue">0</span>%
+                    </div>
+                </div>
+                <p id="scoreAnalysis" class="score-analysis">Complete protocols to stabilize markers.</p>
+            </section>
+
+            <section class="card reco-card">
+                <h3>Priority Recommendations</h3>
+                <div id="recoContent" class="reco-content">
+                    <p>Analyzing systemic bottlenecks...</p>
+                </div>
+            </section>
+
+            <section class="card habits-preview-card">
+                <h3>Routine Overview</h3>
+                <ul id="todayHabitsList" class="habit-list">
+                    <!-- Populated by JS -->
+                </ul>
+                <a href="habits.html" class="btn-link">Manage Protocol →</a>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/shared.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

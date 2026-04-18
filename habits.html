@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthPulse - Professional Wellness Management</title>
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/habits.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html" class="logo">HealthPulse</a>
+        <ul class="nav-links">
+            <li><a href="home.html"><span>Home</span></a></li>
+            <li><a href="dashboard.html"><span>Analytics</span></a></li>
+            <li><a href="habits.html"><span>Habits</span></a></li>
+            <li><a href="mood.html"><span>Mental Health</span></a></li>
+            <li><a href="challenges.html"><span>Challenges</span></a></li>
+            <li><a href="profile.html"><span>Profile</span></a></li>
+            <li><a href="#" onclick="logout(); return false;" class="logout-link"><span>Logout</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="container fade-in">
+        <div class="card habit-manager">
+            <header class="page-header">
+                <h2>Clinical Health Protocol ❤️</h2>
+                <p class="subtitle">Standardize your wellness routines and track task compliance with precision.</p>
+            </header>
+
+            <div class="add-habit-form">
+                <input type="text" id="newHabitInput" placeholder="Define new health task... (e.g. 2L Water Intake)">
+                <button class="btn-primary" id="addHabitBtn">Register Task</button>
+            </div>
+
+            <div id="habitMessage"></div>
+
+            <ul id="habitListFull" class="full-habit-list">
+                <!-- Verified tasks will appear here -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/shared.js"></script>
+    <script src="js/habits.js"></script>
+</body>
+</html>
+
+</html>

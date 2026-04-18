@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthPulse - User Identity Profile</title>
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html" class="logo">HealthPulse</a>
+        <ul class="nav-links">
+            <li><a href="home.html"><span>Home</span></a></li>
+            <li><a href="dashboard.html"><span>Analytics</span></a></li>
+            <li><a href="habits.html"><span>Habits</span></a></li>
+            <li><a href="mood.html"><span>Mental Health</span></a></li>
+            <li><a href="challenges.html"><span>Challenges</span></a></li>
+            <li><a href="profile.html"><span>Profile</span></a></li>
+            <li><a href="#" onclick="logout(); return false;" class="logout-link"><span>Logout</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="container fade-in">
+        <div class="profile-container card">
+            <header class="profile-header">
+                <div class="avatar">👤</div>
+                <h2>Primary Identity Profile</h2>
+                <p class="subtitle">Configure your health markers and manage your systemic growth focus.</p>
+            </header>
+            
+            <form id="profileForm" class="profile-form">
+                <div class="form-group">
+                    <label for="userNameInput">Registry Name</label>
+                    <input type="text" id="userNameInput" placeholder="Enter clinical ID or name">
+                </div>
+
+                <div class="form-group" id="emailGroup">
+                    <label for="userEmailInput">Medical Email</label>
+                    <input type="email" id="userEmailInput" placeholder="email@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="userGoalSelect">Core Optimization Focus</label>
+                    <select id="userGoalSelect">
+                        <option value="Stay Fit">Peak Conditioning</option>
+                        <option value="Lose Weight">Metabolic Balance</option>
+                        <option value="Mental Health">Cognitive Fortitude</option>
+                        <option value="Build Muscle">Physical Hypertrophy</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn-primary">Update Parameters</button>
+                <div id="saveMessage" class="save-msg hidden">Registry updated successfully!</div>
+            </form>
+
+            <section class="stats-section">
+                <h3>Global Health Metrics</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-value" id="statPoints">0</span>
+                        <span class="stat-label">Metric Credits</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value" id="statStreak">0</span>
+                        <span class="stat-label">Active Sequence</span>
+                    </div>
+                </div>
+            </section>
+            <section class="mgmt-section">
+                <h3>Access Management</h3>
+                <div class="mgmt-grid">
+                    <button id="logoutBtn" class="btn-secondary" onclick="logout()">Terminate Session</button>
+                    <button id="upgradeBtn" class="btn-primary hidden" onclick="window.location.href='index.html'">Become a Member</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/shared.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>
