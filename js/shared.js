@@ -49,7 +49,7 @@ const challengeLibrary = {
 function initData() {
     let data = localStorage.getItem('healthCompanionData');
     const today = new Date().toDateString();
-    
+
     if (!data) {
         let initialData = { ...defaultData };
         initialData.lastActiveDate = today;
@@ -63,10 +63,10 @@ function initData() {
             parsed.mood = null;
             parsed.lastActiveDate = today;
             parsed.streak += 1;
-            
+
             // Refresh challenges based on goal
             parsed.challenges = selectDailyChallenges(parsed.goal);
-            
+
             localStorage.setItem('healthCompanionData', JSON.stringify(parsed));
         }
     }
@@ -103,21 +103,21 @@ function addPoints(pts) {
 function calculateHealthScore() {
     const data = getData();
     let score = 0;
-    
+
     // Habits contribution (40%)
     const completedHabits = data.habits.filter(h => h.completed).length;
     const habitScore = data.habits.length > 0 ? (completedHabits / data.habits.length) * 40 : 0;
-    
+
     // Challenges contribution (40%)
     const completedChallenges = data.challenges.filter(c => c.completed).length;
     const challengeScore = data.challenges.length > 0 ? (completedChallenges / data.challenges.length) * 40 : 0;
-    
+
     // Mood contribution (20%)
     let moodScore = 0;
     if (data.mood === 'happy') moodScore = 20;
     else if (data.mood === 'neutral') moodScore = 15;
     else if (data.mood === 'sad') moodScore = 5;
-    
+
     score = Math.round(habitScore + challengeScore + moodScore);
     return score;
 }
@@ -155,14 +155,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const randomMsg = motivationMessages[Math.floor(Math.random() * motivationMessages.length)];
-        
+
         const toast = document.createElement('div');
         toast.className = 'toast';
         toast.innerHTML = `
             <span class="toast-icon">${randomMsg.icon}</span>
             <span class="toast-text">${randomMsg.text}</span>
         `;
-        
+
         container.appendChild(toast);
 
         // Disappear after 5 seconds
@@ -216,20 +216,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (target) {
             const ripple = document.createElement('span');
             ripple.className = 'ripple-effect';
-            
+
             const rect = target.getBoundingClientRect();
             const size = Math.max(rect.width, rect.height);
             ripple.style.width = ripple.style.height = size + 'px';
-            
+
             const x = e.clientX - rect.left - size / 2;
             const y = e.clientY - rect.top - size / 2;
-            
+
             ripple.style.left = x + 'px';
             ripple.style.top = y + 'px';
-            
+
             target.classList.add('ripple');
             target.appendChild(ripple);
-            
+
             setTimeout(() => {
                 ripple.remove();
             }, 600);

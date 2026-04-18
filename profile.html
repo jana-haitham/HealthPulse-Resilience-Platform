@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,18 @@
     <link rel="stylesheet" href="css/profile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <nav class="navbar">
         <a href="home.html" class="logo">HealthPulse</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul class="nav-links">
             <li><a href="home.html"><span>Home</span></a></li>
             <li><a href="dashboard.html"><span>Analytics</span></a></li>
@@ -31,7 +39,7 @@
                 <h2>Primary Identity Profile</h2>
                 <p class="subtitle">Configure your health markers and manage your systemic growth focus.</p>
             </header>
-            
+
             <form id="profileForm" class="profile-form">
                 <div class="form-group">
                     <label for="userNameInput">Registry Name</label>
@@ -42,7 +50,7 @@
                     <label for="userEmailInput">Medical Email</label>
                     <input type="email" id="userEmailInput" placeholder="email@example.com">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="userGoalSelect">Core Optimization Focus</label>
                     <select id="userGoalSelect">
@@ -52,7 +60,7 @@
                         <option value="Build Muscle">Physical Hypertrophy</option>
                     </select>
                 </div>
-                
+
                 <button type="submit" class="btn-primary">Update Parameters</button>
                 <div id="saveMessage" class="save-msg hidden">Registry updated successfully!</div>
             </form>
@@ -74,7 +82,8 @@
                 <h3>Access Management</h3>
                 <div class="mgmt-grid">
                     <button id="logoutBtn" class="btn-secondary" onclick="logout()">Terminate Session</button>
-                    <button id="upgradeBtn" class="btn-primary hidden" onclick="window.location.href='index.html'">Become a Member</button>
+                    <button id="upgradeBtn" class="btn-primary hidden"
+                        onclick="window.location.href='index.html'">Become a Member</button>
                 </div>
             </section>
         </div>
@@ -83,4 +92,5 @@
     <script src="js/shared.js"></script>
     <script src="js/profile.js"></script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,18 @@
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <nav class="navbar">
         <a href="home.html" class="logo">HealthPulse</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul class="nav-links">
             <li><a href="home.html"><span>Home</span></a></li>
             <li><a href="dashboard.html"><span>Analytics</span></a></li>
@@ -26,7 +34,7 @@
 
     <div class="container fade-in">
         <header class="dashboard-header">
-            <h2>Welcome back, <span id="userName">User</span>! ❤️</h2>
+            <h2>Welcome back, <span id="userName">User</span>!</h2>
             <div class="stats-badges">
                 <div class="badge status-badge status-positive">
                     <span class="badge-icon">📊</span>
@@ -48,7 +56,8 @@
                 <div class="growth-bar-container">
                     <div class="growth-bar" id="habitProgress"></div>
                 </div>
-                <p class="progress-text"><span id="habitsCompleted">0</span> / <span id="habitsTotal">0</span> tasks verified today</p>
+                <p class="progress-text"><span id="habitsCompleted">0</span> / <span id="habitsTotal">0</span> tasks
+                    verified today</p>
             </section>
 
             <section class="card mood-card">
@@ -90,4 +99,5 @@
     <script src="js/shared.js"></script>
     <script src="js/dashboard.js"></script>
 </body>
+
 </html>

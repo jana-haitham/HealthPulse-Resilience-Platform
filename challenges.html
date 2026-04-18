@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,18 @@
     <link rel="stylesheet" href="css/challenges.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <nav class="navbar">
         <a href="home.html" class="logo">HealthPulse</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul class="nav-links">
             <li><a href="home.html"><span>Home</span></a></li>
             <li><a href="dashboard.html"><span>Analytics</span></a></li>
@@ -26,8 +34,9 @@
 
     <div class="container fade-in">
         <header class="page-header text-center">
-            <h2>Health Resilience Protocols 📊</h2>
-            <p class="subtitle">Execute structured wellness challenges to optimize your physical markers and earn clinical points.</p>
+            <h2>Health Resilience Protocols</h2>
+            <p class="subtitle">Execute structured wellness challenges to optimize your physical markers and earn
+                clinical points.</p>
         </header>
 
         <div id="challengesContainer" class="challenges-grid">
@@ -38,4 +47,5 @@
     <script src="js/shared.js"></script>
     <script src="js/challenges.js"></script>
 </body>
+
 </html>

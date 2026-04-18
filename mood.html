@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,18 @@
     <link rel="stylesheet" href="css/mood.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <nav class="navbar">
         <a href="home.html" class="logo">HealthPulse</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul class="nav-links">
             <li><a href="home.html"><span>Home</span></a></li>
             <li><a href="dashboard.html"><span>Analytics</span></a></li>
@@ -27,10 +35,10 @@
     <div class="container fade-in">
         <div class="card mood-tracker">
             <header class="page-header">
-                <h2>Psychometric State Assessment 🧠</h2>
+                <h2>Psychometric State Assessment</h2>
                 <p class="subtitle">Monitor cognitive patterns and maintain optimal emotional equilibrium.</p>
             </header>
-            
+
             <div class="mood-options">
                 <button class="mood-btn" data-mood="happy">
                     <span class="emoji">😄</span>
@@ -49,7 +57,7 @@
             <div id="moodFeedback" class="feedback-box hidden">
                 <!-- Data-driven feedback populated by JS -->
             </div>
-            
+
             <div class="current-status card">
                 <h3>Latest Psychometric Log</h3>
                 <div id="currentMoodStatus">No data recorded for current session.</div>
@@ -60,4 +68,5 @@
     <script src="js/shared.js"></script>
     <script src="js/mood.js"></script>
 </body>
+
 </html>
