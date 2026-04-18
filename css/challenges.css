@@ -85,3 +85,17 @@
 .hidden {
     display: none;
 }
+
+@media (max-width: 600px) {
+    .challenges-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .challenge-card {
+        padding: 2rem 1.25rem;
+    }
+    
+    .challenge-text {
+        font-size: 1.1rem;
+    }
+}

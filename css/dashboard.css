@@ -139,4 +139,26 @@
         align-items: flex-start;
         gap: 1rem;
     }
+
+    .circular-progress {
+        width: 120px;
+        height: 120px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-badges {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .badge {
+        flex: 1;
+        min-width: 140px;
+    }
 }
